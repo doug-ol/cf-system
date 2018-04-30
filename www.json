@@ -2,7 +2,9 @@
   "type": "service",
   "name": "www",
   "description": "Webserver for public web app.",
-
+  "secrets": {
+    "MONGOLAB_URI": {}
+  },
   "components": [
     {
       "name": "www",

@@ -3,7 +3,7 @@
   "name": "www",
   "description": "Webserver for public web app.",
   "secrets": {
-    "MONGOLAB_URI": {}
+    "mongodb-uri": {}
   },
   "components": [
     {

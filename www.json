@@ -24,7 +24,7 @@
           "commit": "55e20db6df55738b4862bcc10dec047fc82f7e44"
         },
         "language": "ruby:2.4.0",
-        "command": "apt-get install nodejs && bundle install"
+        "command": "apt update && apt-get install -y nodejs && bundle install"
       },
       "exec": {
         "command": [

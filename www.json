@@ -21,7 +21,7 @@
       "build": {
         "git_repository": {
           "url": "https://github.com/doug-ol/coinfolio.git",
-          "commit": "44fb1bd13edf63b0d034db685c7e18910d78a54b"
+          "commit": "316350722bbc17e6025807d13145c0afa2516c28"
         },
         "language": "ruby:2.4.0",
         "command": "apt update && apt-get install -y nodejs && bundle install"

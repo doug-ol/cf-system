@@ -32,7 +32,7 @@
           "s"
         ],
         "environment": {
-          "MONGOLAB_URI": { "secret": "mongodb-uri" },
+          "MONGOLAB_URI": { "secret": "mongodb-uri" }
         }
       }
     }

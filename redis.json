@@ -13,7 +13,8 @@
                 }
             ],
             "build": {
-                "language": "redis"
+                "language": "redis",
+                "command": ""
             },
             "environment": {}
         }

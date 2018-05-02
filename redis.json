@@ -18,7 +18,7 @@
                     "commit": "aed974fbac9faedc3fe0e5f6b7454078b9f38cf7"
                 },
                 "language": "redis",
-                "command": ""
+                "command": "true"
             },
             "environment": {}
         }

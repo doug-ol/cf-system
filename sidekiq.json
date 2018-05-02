@@ -1,22 +1,14 @@
 {
   "type": "service",
-  "name": "www",
-  "description": "Webserver for public web app.",
+  "name": "sidekiq",
+  "description": "Sidekiq for public web app.",
   "secrets": {
     "mongodb-uri": {}
   },
   "components": [
     {
-      "name": "www",
+      "name": "sidekiq",
       "ports": [
-        {
-          "name": "http",
-          "port": 3000,
-          "protocol": "HTTP",
-          "external_access": {
-            "public": true
-          }
-        }
       ],
       "build": {
         "git_repository": {
@@ -28,8 +20,9 @@
       },
       "exec": {
         "command": [
-          "rails",
-          "s"
+          "bundle",
+          "exec",
+          "sidekiq"
         ],
         "environment": {
           "MONGOLAB_URI": { "secret": "mongodb-uri" },

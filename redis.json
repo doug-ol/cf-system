@@ -1,0 +1,25 @@
+{
+    "type": "service",
+    "name": "redis",
+    "description": "redis",
+    "components": [
+        {
+            "name": "redis",
+            "ports": [
+                {
+                    "name": "http",
+                    "port": 6379,
+                    "protocol": "HTTP"
+                }
+            ],
+            "build": {
+                "language": "redis"
+            },
+            "environment": {}
+        }
+    ],
+    "resources": {
+        "num_instances": 1,
+        "instance_type": "t2.small"
+    }
+}

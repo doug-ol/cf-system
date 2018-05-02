@@ -3,6 +3,8 @@
   "name": "coinfolio",
 
   "subsystems": [
-    { "$include": { "url": "www.json" } }
+    { "$include": { "url": "www.json" } },
+    { "$include": { "url": "sidekiq.json" } },
+    { "$include": { "url": "redis.json" } }
   ]
 }

@@ -13,6 +13,7 @@
                 }
             ],
             "build": {
+                "git_repository": {},
                 "language": "redis",
                 "command": ""
             },

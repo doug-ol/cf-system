@@ -13,7 +13,10 @@
                 }
             ],
             "build": {
-                "git_repository": {},
+                "git_repository": {
+                    "url": "https://github.com/doug-ol/coinfolio.git",
+                    "commit": "aed974fbac9faedc3fe0e5f6b7454078b9f38cf7"
+                },
                 "language": "redis",
                 "command": ""
             },

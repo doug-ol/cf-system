@@ -7,9 +7,9 @@
             "name": "redis",
             "ports": [
                 {
-                    "name": "http",
+                    "name": "tcp",
                     "port": 6379,
-                    "protocol": "HTTP"
+                    "protocol": "TCP"
                 }
             ],
             "build": {

@@ -1,0 +1,44 @@
+$parameters:
+  mongodb_uri:
+    type: secret
+
+type: v1/system
+
+node_pools:
+  main:
+    instance_type: t2.large
+    num_instances: 1
+
+components:
+  redis:
+    type: v1/service
+    node_pool: /:main
+    build:
+      type: docker_image
+      repository: library/redis
+
+  www:
+    type: v1/service
+    description: rails app
+    node_pool: /:main
+    build:
+      type: command_build
+      base_image:
+        repository: ruby:2.4.0
+      command:
+        - apt update && apt-get install -y nodejs && bundle install
+    exec:
+      command:
+        - rails
+        - s
+      environment:
+        MONGODB_URI: ${mongodb_uri}
+        REDIS_PROVIDER: redis://redis.coinfolio.local:6379
+
+    ports:
+      "3000":
+         protocol: HTTP
+
+    git_repository:
+      url: https://github.com/doug-ol/coinfolio.git
+      branch: master
